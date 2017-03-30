@@ -535,6 +535,10 @@ int GetRecordingLastPlayedPosition(const PVR_RECORDING &_unused(recording))
 {
   return -1;
 }
+  
+PVR_ERROR IsRecordable(const EPG_TAG& tag, bool* isRecordable) { return PVR_ERROR_NO_ERROR; }
+bool IsPlayable(const EPG_TAG &tag) { return false; }
+int GetEpgTagUrl(const EPG_TAG &tag, char *url, int urlLen) { return -1; }
 
 /* Channel Management */
 PVR_ERROR OpenDialogChannelScan(void)
